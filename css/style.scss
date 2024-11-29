@@ -9,7 +9,7 @@ $textCol: #1f1f1f;
 $buttonPrimary: #2B3674;
 
 // import fonts - font-family: 'Open Sans', sans-serif;
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Open+Sans:wght@300;400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
 
 @mixin main-font {
   font-family: "Open Sans", sans-serif;
@@ -788,7 +788,7 @@ a:focus {
   text-align: center;
 
   p {
-    color: $primary2;
+    color: #0c0c0c;
     padding: 25px 0;
     margin: 0;
 
