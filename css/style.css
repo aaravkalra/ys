@@ -929,15 +929,15 @@ a:focus {
   color: inherit;
 }
 .team-5{
-  display: inline-block;
-    padding: 10px 45px;
-    margin-top: 20px;
-    background-color: #00bbf0;
-    color: #ffffff;
-    border-radius: 0;
-    -webkit-transition: all 0.3s;
-    transition: all 0.3s;
-    border: none;
+  display: inline-block !important;
+    padding: 10px 45px !important;
+    margin-top: 20px !important;
+    background-color: #00bbf0 !important;
+    color: #ffffff !important;
+    border-radius: 0 !important;
+    -webkit-transition: all 0.3s !important;
+    transition: all 0.3s !important;
+    border: none !important;
 }
 .team-6{
     display: flex;
