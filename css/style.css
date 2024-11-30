@@ -674,6 +674,7 @@ a:focus {
   color: #00bbf0;
 }
 
+
 /*team section end*/
 /* client section start */
 .client_section .heading_container {
@@ -926,5 +927,33 @@ a:focus {
 
 .footer_section p a {
   color: inherit;
+}
+.team-5{
+  display: inline-block;
+    padding: 10px 45px;
+    margin-top: 20px;
+    background-color: #00bbf0;
+    color: #ffffff;
+    border-radius: 0;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    border: none;
+}
+.team-6{
+    display: flex;
+    width: 20%;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 45px;
+    margin-top: 20px;
+    background-color: #00bbf0;
+    color: #ffffff;
+    border-radius: 0;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    border: none;
+}
+.about-text{
+  text-align: center;
 }
 /*# sourceMappingURL=style.css.map */
