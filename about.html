@@ -20,6 +20,8 @@
 
   <!-- fonts style -->
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
   <!--owl slider stylesheet -->
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
@@ -88,34 +90,107 @@
   <!-- about section -->
 
   <section class="about_section layout_padding">
-    <div class="container  ">
-      <div class="heading_container heading_center">
-        <h2>
-          About <span>Us</span>
-        </h2>
-      </div>
-      <div class="row">
-        
-        <div>
-          <div class="detail-box">
-            <h3>
-              We Are YouthShield
-            </h3>
-            <p>
-              Our innovation is a real-time monitoring and early intervention system designed to detect risky behaviors in students, such as depression, suicide, drug use, bullying, abuse, and violence. By combining data from web activity, school attendance, grades, surveys, and reports from parents and school staff, the system generates a personalized risk score for each student. When a student's score exceeds a threshold, school administrators are alerted, allowing them to intervene early by providing resources like mental health counseling, involving parents, or notifying law enforcement in critical cases.
-            </p>
-            <p>
-              The system collects data from multiple channels. A browser extension monitors students' online activity, including on school-issued devices and, with parental consent, on personal devices. It also integrates with existing school systems to pull attendance and grade data. Teachers, parents, and staff provide insights on behavioral changes, such as sleep disturbances or changes in class performance. This data is analyzed to create an evolving risk score that helps school staff identify at-risk students and take action accordingly.
-            </p>
-            <p>The school administrators have access to a web application with dashboards and alerts to monitor the students' mental health. They can check the student health score with a detailed timeline of events and reports. They can create and manage the alerts. Health scores are aggregated anonymously to compare the school performances at the district and state levels. Schools can check their student's health across grades and over time. 
-            </p>
-            <p>The innovation addresses a critical need for early intervention. Detecting mental health issues and risky behaviors early is essential to preventing self-harm or violence. The system gives school staff real-time alerts and a detailed risk profile for each student, enabling them to allocate resources more effectively and intervene before problems escalate. The ongoing monitoring of risk scores allows schools to track the impact of interventions and adjust their approach as necessary. As schools face growing pressure to address mental health challenges, our solution offers a scalable, cost-effective way to monitor and support students proactively.
-            </p>
-          </div>
+    <div class="container">
+    
+        <div class="heading_container heading_center">
+            <h2>About <span>Us</span></h2>
         </div>
-      </div>
+        <div id="solutionsCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="images/ysfirst.png" class="d-block w-100" alt="Solution 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/yssecond.png" class="d-block w-100" alt="Solution 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/ysthird.png" class="d-block w-100" alt="Solution 3">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/ysfourth.png" class="d-block w-100" alt="Solution 4">
+                </div>
+            </div>
+            <div class="carousel-controls-below">
+                <button id="prevSolutions" class="btn btn-primary">Previous</button>
+                <button id="nextSolutions" class="btn btn-primary">Next</button>
+            </div>
+        </div>
+
+      
+        <div class="heading_container heading_center">
+            <h2>Our <span>Product</span></h2>
+        </div>
+        <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="images/ys11.png" class="d-block w-100" alt="Product 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/ys12.png" class="d-block w-100" alt="Product 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/ys13.png" class="d-block w-100" alt="Product 3">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/ys14.png" class="d-block w-100" alt="Product 4">
+                </div>
+            </div>
+            <div class="carousel-controls-below">
+                <button id="prevProducts" class="btn btn-primary">Previous</button>
+                <button id="nextProducts" class="btn btn-primary">Next</button>
+            </div>
+        </div>
+
+        <!-- JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                
+                const solutionsCarousel = document.querySelector("#solutionsCarousel");
+                const solutions = new bootstrap.Carousel(solutionsCarousel);
+                const totalSolutions = document.querySelectorAll("#solutionsCarousel .carousel-item").length;
+
+                solutionsCarousel.dataset.currentSlide = "0";
+
+                document.querySelector("#prevSolutions").addEventListener("click", () => {
+                    const currentSlide = parseInt(solutionsCarousel.dataset.currentSlide, 10);
+                    const newSlide = (currentSlide - 1 + totalSolutions) % totalSolutions;
+                    solutions.to(newSlide);
+                    solutionsCarousel.dataset.currentSlide = newSlide;
+                });
+
+                document.querySelector("#nextSolutions").addEventListener("click", () => {
+                    const currentSlide = parseInt(solutionsCarousel.dataset.currentSlide, 10);
+                    const newSlide = (currentSlide + 1) % totalSolutions;
+                    solutions.to(newSlide);
+                    solutionsCarousel.dataset.currentSlide = newSlide;
+                });
+
+              
+                const productCarousel = document.querySelector("#productCarousel");
+                const products = new bootstrap.Carousel(productCarousel);
+                const totalProducts = document.querySelectorAll("#productCarousel .carousel-item").length;
+
+                productCarousel.dataset.currentSlide = "0";
+
+                document.querySelector("#prevProducts").addEventListener("click", () => {
+                    const currentSlide = parseInt(productCarousel.dataset.currentSlide, 10);
+                    const newSlide = (currentSlide - 1 + totalProducts) % totalProducts;
+                    products.to(newSlide);
+                    productCarousel.dataset.currentSlide = newSlide;
+                });
+
+                document.querySelector("#nextProducts").addEventListener("click", () => {
+                    const currentSlide = parseInt(productCarousel.dataset.currentSlide, 10);
+                    const newSlide = (currentSlide + 1) % totalProducts;
+                    products.to(newSlide);
+                    productCarousel.dataset.currentSlide = newSlide;
+                });
+            });
+        </script>
     </div>
-  </section>
+</section>
+
 
   <!-- end about section -->
 
