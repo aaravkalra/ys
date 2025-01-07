@@ -1062,3 +1062,8 @@ a:focus {
   margin-left: -300px;
   margin-bottom: -525px;
 }
+
+.team-details {
+  text-align: justify;
+  padding: 15px;
+}
