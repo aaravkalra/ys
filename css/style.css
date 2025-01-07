@@ -1057,3 +1057,8 @@ a:focus {
   margin-left: -150px;
   margin-bottom: 50px;
 }
+.fullwidth2{
+  width: 140%;
+  margin-left: -300px;
+  margin-bottom: -525px;
+}
