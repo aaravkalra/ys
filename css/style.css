@@ -1064,6 +1064,9 @@ a:focus {
 }
 
 .team-details {
-  text-align: justify;
+  text-align: left;
   padding: 15px;
+}
+.left-justified{
+  text-align: left;
 }
